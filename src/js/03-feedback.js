@@ -34,6 +34,7 @@ function populateForm() {
   const parsedData = JSON.parse(savedData);
 
   if (parsedData) {
+    Object.assign(formData, parsedData);
     refs.form.email.value = parsedData.email || '';
     refs.form.message.value = parsedData.message || '';
   }
